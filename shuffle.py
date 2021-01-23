@@ -13,24 +13,17 @@ def shuffle_axis(secret):
     for letter in secret:
         number += ord(letter)
     number += len(secret)
-    # (ﾉ ͡° ͜ʖ ͡°)ﾉ ‥…━━━★
+    number = number % len(message)
+    print("axis of rotation for : " + secret + " is " + str(number))
     return number
 
 def do_shuffle(message, axis):
     message = list(message)
-    # (ﾉ ͡° ͜ʖ ͡°)ﾉ ‥…━━━★
+    
     message.reverse()
-    # (ﾉ ͡° ͜ʖ ͡°)ﾉ ‥…━━━★
     def shift(seq, n):
         a = n % len(seq)
         return seq[-a:] + seq[:-a]
     
     message = shift(message, axis)
     return ''.join(message)
-
-
-# Behold! An army of magic lenny's has arrived!
-# ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ
-#        ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ
-#   ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ
-#                ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ ╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ
