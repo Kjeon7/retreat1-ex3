@@ -1,6 +1,6 @@
 # Uncomment these imports when you'd like to test:
-#from caesar import encode_caesar, decode_caesar
-#from shuffle import encode_shuffle, decode_shuffle
+from caesar import encode_caesar, decode_caesar
+from shuffle import encode_shuffle, decode_shuffle
 #from vigenere import encode_vigenere, decode_vigenere
 
 # Main function
@@ -36,16 +36,12 @@ def decode_test():
 # Perform a set of encoding operations
 # You may customize which set of operations you encode with
 def encode(message, secret):
-    return message 
-    # Example:
-    # return encode_caesar(encode_shuffle(message, secret), secret)
+    return encode_caesar(encode_shuffle(message, secret), secret)
 
 # Decode the message.
 # You should use the encoding operations in reverse order with the same secret
 def decode(message, secret):
-    return message
-    # Example:
-    # return decode_shuffle(decode_caesar(message, secret), secret)
+    return decode_shuffle(decode_caesar(message, secret), secret)
 
 # Run a simple test
 run_test()
