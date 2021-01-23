@@ -8,6 +8,10 @@ def encode_caesar(message, secret):
 
 def decode_caesar(message, secret):
     return message #Real implementation in caesarfeat! test
+    offset = len(secret)
+    offset %= 26
+    offset = 26 - offset
+    return do_caesar(message, offset)
 
 # Performs the caesar cipher operation
 def do_caesar(message, offset):
